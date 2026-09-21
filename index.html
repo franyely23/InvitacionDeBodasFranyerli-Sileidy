@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franyerli & Sileidy | Invitación de boda</title>
+  <meta name="description" content="Invitación de boda de Franyerli y Sileidy." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- HOJA DE ESTILOS PRINCIPAL -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Botón de música -->
+  <button class="music-button" id="musicToggle" aria-label="Reproducir música">♫</button>
+  <audio id="weddingMusic" loop></audio>
+
+ <!-- HERO / PORTADA -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow1">Nuestra boda</div>
+    <h1>
+      <span class="hero-name">FRANYERLI</span>
+      <span class="ampersand">&amp;</span>
+      <span class="hero-name">SILEIDY</span>
+    </h1>
+    <div class="date">19 DICIEMBRE, 2026</div>
+    <div class="scroll-hint">Nuestro mejor capítulo comienza aquí.</div>
+  </div>
+</header>
+
+
+
+  <main>
+    <!-- VERSÍCULO Y FOTOGRAFÍAS -->
+    <section class="intro">
+      <div class="container verse">
+        <div class="eyebrow">Con la bendición de Dios</div>
+        <h2>“Por tanto, lo que Dios juntó, no lo separe el hombre.”</h2>
+        <p><strong>Mateo 19:6</strong></p>
+        <p>Con mucha alegría queremos compartir contigo el comienzo de esta nueva etapa de nuestras vidas.</p>
+      </div>
+
+      <div class="container photo-grid">
+        <!--
+          FOTOGRAFÍA 1:
+          Cambia únicamente la URL dentro del atributo src.
+        -->
+        <img
+          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"
+          alt="Detalles románticos de una boda"
+        />
+
+        <!--
+          FOTOGRAFÍA 2:
+          Cambia únicamente la URL dentro del atributo src.
+        -->
+        <img
+          src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85"
+          alt="Decoración elegante para boda"
+        />
+      </div>
+    </section>
+
+    <!-- INFORMACIÓN DEL EVENTO -->
+    <section class="details">
+      <div class="container">
+        <div class="eyebrow">Celebremos juntos</div>
+        <h2 class="section-title">El gran día</h2>
+        <p class="section-subtitle">
+          Será un honor contar con tu presencia en este momento tan especial para nosotros.
+        </p>
+
+<!-- CUENTA REGRESIVA -->
+<section class="countdown-section" aria-label="Cuenta regresiva para la boda">
+  <div class="container countdown-wrap">
+    <div class="eyebrow">Faltan</div>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown-item"><strong id="countDays">--</strong><span>Días</span></div>
+      <div class="countdown-item"><strong id="countHours">--</strong><span>Horas</span></div>
+      <div class="countdown-item"><strong id="countMinutes">--</strong><span>Minutos</span></div>
+      <div class="countdown-item"><strong id="countSeconds">--</strong><span>Segundos</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="detail-grid">
+  <article class="detail-card">
+    <div class="label">
+      <h2>Fecha y hora</h2>
+    </div>
+    <p>
+      <span id="detailDate">19 Diciembre 2026</span>, 
+      <span id="detailTime">4:00 pm</span>
+    </p>
+  </article>
+
+  <article class="detail-card">
+    <div class="label">
+      <h2>Lugar</h2>
+    </div>
+    <p>Av. Rafael Vidal 14, Santiago de los Caballeros 51000</p>
+    <p id="detailPlace"></p>
+    <a class="button" id="mapsButton" href="https://maps.google.com/?cid=9090674406568778230" target="_blank" rel="noopener">Cómo llegar</a>
+  </article>
+</div>
+
+   <!-- INFORMACIÓN IMPORTANTE -->
+    <section class="important">
+      <div class="container">
+        <div class="eyebrow">Información importante</div>
+        <h2 class="section-title">Para tener en cuenta</h2>
+
+        <!-- Convertida a tarjeta con la misma estructura que las de arriba -->
+        <div class="important-card">
+          <div class="important-item">
+            <strong>Llegar puntual</strong>
+            <span>Agradecemos tu puntualidad para disfrutar cada momento de la celebración</span>
+          </div>
+
+          <div class="important-item">
+            <strong>Ceremonia sin niños</strong>
+            <span>Con mucho cariño, hemos reservado esta ceremonia para adultos</span> 
+          </div>
+
+          <div class="important-item">
+            <strong>Etiqueta de vestimenta</strong>
+            <span>Cóctel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIRMACIÓN FINAL -->
+   <section class="rsvp">
+  <div class="container">
+    <div class="eyebrow1">Nota especial</div>
+    
+    <div class="section-titlefinal">Hemos reservado este lugar pensando en ti</div>
+    <p>
+      Tu presencia es muy importante para nosotros. Si por algún motivo se te hace imposible acompañarnos, te agradeceríamos avisarnos con tiempo para poder organizar todo con el mismo amor y cuidado con el que hemos preparado este día.
+    </p>
+
+    <a 
+      class="button" 
+      id="rsvpButtonBottom" 
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeB9AL8mzC8mG8GvWnGVzwt_uz9I-a9UpsXAF1a45J-EopyCw/viewform?usp=publish-editor" 
+      target="_blank" 
+      rel="noopener"
+    >
+      Confirma tu asistencia
+    </a>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <div class="eyebrow1">Con mucho cariño Franyerli & Sileidy</div>
+    
+  </footer>
+
+  <!-- ARCHIVOS JAVASCRIPT -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/countdown.js"></script>
+</body>
+</html>
