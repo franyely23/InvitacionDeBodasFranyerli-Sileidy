@@ -65,9 +65,9 @@ a {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(rgba(63, 56, 51, .30), rgba(63, 56, 51, .38)),
-    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85")
+background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+    url("../Imagenes/fondo.png")
     center / cover fixed;
   color: white;
   padding: 60px 20px;
