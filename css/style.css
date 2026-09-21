@@ -468,7 +468,106 @@ footer {
   transform: scale(1.08);
   background: var(--cocoa);
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Montserrat:wght@300;400&display=swap');
 
+.music-card {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #5a5a5a;
+  border-top: 1px solid #e2dacd;
+  border-bottom: 1px solid #e2dacd;
+}
+
+.music-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: #2c2c2c;
+}
+
+.music-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #9e988e;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+}
+
+.controls-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c8bcab, transparent);
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(94, 81, 72, .18); /* Verde olivo de la imagen */
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(107, 115, 85, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+  background-color: #c5a0a0;
+}
+
+.play-icon {
+  margin-left: 3px; /* Centra la flecha visualmente */
+}
+
+.hidden {
+  display: none !important;
+}
+
+.progress-section {
+  width: 100%;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background-color: #e9e5dd;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #c0b39d;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #a0998f;
+  margin-top: 8px;
+}
 /* =====================================================
    DISEÑO RESPONSIVO
    ===================================================== */

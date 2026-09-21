@@ -15,9 +15,7 @@
 </head>
 <body>
 
-  <!-- Botón de música -->
-  <button class="music-button" id="musicToggle" aria-label="Reproducir música">♫</button>
-  <audio id="weddingMusic" loop></audio>
+
 
  <!-- HERO / PORTADA -->
 <header class="hero">
@@ -33,7 +31,37 @@
   </div>
 </header>
 
+<div class="music-card">
+  <div class="music-header">
+    <p class="music-title">Dale play a nuestra canción</p>
+  </div>
 
+  <div class="controls-wrapper">
+    <div class="divider-line"></div>
+    <button class="play-btn" id="musicToggle" aria-label="Reproducir música">
+      <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg class="pause-icon hidden" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="progress-section">
+    <div class="progress-bar-container" id="progressContainer">
+      <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+    <div class="time-display">
+      <span id="currentTime">0:00</span>
+      <span id="durationTime">0:00</span>
+    </div>
+  </div>
+
+  <!-- Asegúrate de colocar la ruta de tu archivo en el 'src' -->
+  <audio id="weddingMusic" src="Musica/ALLOFME.MP3" preload="metadata" loop></audio>
+</div>
 
   <main>
     <!-- VERSÍCULO Y FOTOGRAFÍAS -->

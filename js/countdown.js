@@ -16,6 +16,56 @@
     julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre: 10, diciembre: 11
   };
 
+  const audio = document.getElementById('weddingMusic');
+const musicToggle = document.getElementById('musicToggle');
+const playIcon = musicToggle.querySelector('.play-icon');
+const pauseIcon = musicToggle.querySelector('.pause-icon');
+const progressBar = document.getElementById('progressBar');
+const progressContainer = document.getElementById('progressContainer');
+const currentTimeEl = document.getElementById('currentTime');
+const durationTimeEl = document.getElementById('durationTime');
+
+// Alternar reproducción
+musicToggle.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    playIcon.classList.add('hidden');
+    pauseIcon.classList.remove('hidden');
+  } else {
+    audio.pause();
+    playIcon.classList.remove('hidden');
+    pauseIcon.classList.add('hidden');
+  }
+});
+
+// Formatear tiempo en mm:ss
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+// Cargar la duración total al estar listo el audio
+audio.addEventListener('loadedmetadata', () => {
+  durationTimeEl.textContent = formatTime(audio.duration);
+});
+
+// Actualizar barra de progreso y tiempo actual
+audio.addEventListener('timeupdate', () => {
+  if (audio.duration) {
+    const percentage = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = `${percentage}%`;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+  }
+});
+
+// Adelantar/retroceder al hacer clic en la barra
+progressContainer.addEventListener('click', (e) => {
+  const width = progressContainer.clientWidth;
+  const clickX = e.offsetX;
+  audio.currentTime = (clickX / width) * audio.duration;
+});
+
   function convertirFecha(textoFecha, textoHora) {
     const fecha = textoFecha.trim().toLowerCase()
       .replace(/^(lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo)[,\s]+/, "");
