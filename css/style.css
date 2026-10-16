@@ -59,19 +59,38 @@ a {
    PORTADA
    ===================================================== */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .hero {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
-    url("../Imagenes/manos.PNG")
-    center / cover no-repeat;
-  color: white;
-  padding: 60px 20px;
+    width: 100%;
+    min-height: 100svh;
+
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../Imagenes/manos.PNG")
+        center center / cover no-repeat;
+
+    color: white;
+    margin: 0;
+    padding: 20px;
 }
 
 .hero-content {
@@ -405,16 +424,6 @@ section {
   color: white;
 }
 
-/* Adaptación de portada para teléfonos */
-@media (max-width: 768px) {
-    .hero {
-        background-size: auto 65%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-color: #353333;
-        min-height: 100svh;
-    }
-}
 
 .rsvp .section-title {
   color: white;
@@ -788,4 +797,17 @@ footer {
 button.button {
   font-family: inherit;
   line-height: inherit;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 709 / 798;
+
+        padding: 20px 12px;
+
+        background-position: center;
+        background-size: cover;
+    }
 }
