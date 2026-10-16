@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franyerli & Sileidy | Invitación de boda</title>
+  <meta name="description" content="Invitación de boda de Franyerli y Sileidy." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- HOJA DE ESTILOS PRINCIPAL -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+
+ <!-- HERO / PORTADA -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow1">Nuestra boda</div>
+    <h1>
+      <span class="hero-name">FRANYERLI</span>
+      <span class="ampersand">&amp;</span>
+      <span class="hero-name">SILEIDY</span>
+    </h1>
+    <div class="date">19 DICIEMBRE, 2026</div>
+    <div class="scroll-hint">Nuestro mejor capítulo comienza aquí.</div>
+  </div>
+</header>
+
+<div class="music-card">
+  <div class="music-header">
+    <p class="music-title">Dale play a nuestra canción</p>
+  </div>
+
+  <div class="controls-wrapper">
+    <div class="divider-line"></div>
+    <button class="play-btn" id="musicToggle" aria-label="Reproducir música">
+      <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg class="pause-icon hidden" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="progress-section">
+    <div class="progress-bar-container" id="progressContainer">
+      <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+    <div class="time-display">
+      <span id="currentTime">0:00</span>
+      <span id="durationTime">0:00</span>
+    </div>
+  </div>
+
+  <!-- Asegúrate de colocar la ruta de tu archivo en el 'src' -->
+  <audio id="weddingMusic" src="./Musica/la-bondad-de-dios.mp3" preload="metadata"></audio>
+</div>
+
+  <main>
+    <!-- VERSÍCULO Y FOTOGRAFÍAS -->
+    <section class="intro">
+      <div class="container verse">
+        <div class="eyebrow">Con la bendición de Dios</div>
+        <h2>“Por tanto, lo que Dios juntó, no lo separe el hombre.”</h2>
+        <p><strong>Mateo 19:6</strong></p>
+        <p>Con mucha alegría queremos compartir contigo el comienzo de esta nueva etapa de nuestras vidas.</p>
+      </div>
+
+      
+
+    <!-- INFORMACIÓN DEL EVENTO -->
+    <section class="details">
+      <div class="container">
+        <div class="eyebrow">Celebremos juntos</div>
+        <h2 class="section-title">El gran día</h2>
+        <p class="section-subtitle">
+          Será un honor contar con tu presencia en este momento tan especial para nosotros.
+        </p>
+
+<!-- CUENTA REGRESIVA -->
+<section class="countdown-section" aria-label="Cuenta regresiva para la boda">
+  <div class="container countdown-wrap">
+    <div class="eyebrow">Faltan</div>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown-item"><strong id="countDays">--</strong><span>Días</span></div>
+      <div class="countdown-item"><strong id="countHours">--</strong><span>Horas</span></div>
+      <div class="countdown-item"><strong id="countMinutes">--</strong><span>Minutos</span></div>
+      <div class="countdown-item"><strong id="countSeconds">--</strong><span>Segundos</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="detail-grid">
+  <article class="detail-card">
+    <div class="label">
+      <h2>Fecha y hora</h2>
+    </div>
+    <p>
+      <span id="detailDate">19 Diciembre 2026</span>, 
+      <span id="detailTime">4:00 pm</span>
+    </p>
+  </article>
+
+  <article class="detail-card">
+    <div class="label">
+      <h2>Lugar</h2>
+    </div>
+    <p>Av. Rafael Vidal 14, Santiago de los Caballeros 51000</p>
+    <p id="detailPlace"></p>
+    <a class="button" id="mapsButton" href="https://maps.google.com/?cid=9090674406568778230" target="_blank" rel="noopener">Cómo llegar</a>
+  </article>
+</div>
+
+   <!-- INFORMACIÓN IMPORTANTE -->
+    <section class="important">
+      <div class="container">
+        <div class="eyebrow">Información importante</div>
+        <h2 class="section-title">Para tener en cuenta</h2>
+
+        <!-- Convertida a tarjeta con la misma estructura que las de arriba -->
+        <div class="important-card">
+          <div class="important-item">
+            <strong>Llegar puntual</strong>
+            <span>Agradecemos tu puntualidad para disfrutar cada momento de la celebración</span>
+          </div>
+
+          <div class="important-item">
+            <strong>Ceremonia sin niños</strong>
+            <span>Con mucho cariño, hemos reservado esta ceremonia para adultos</span> 
+          </div>
+
+ <div class="important-item">
+            <strong>Invitación personal</strong>
+            <span>Esta invitación es unica y exclusiva para ti (Sin acompañante)</span> 
+          </div>
+
+          <div class="important-item">
+            <strong>Etiqueta de vestimenta</strong>
+            <span>Cóctel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- CONFIRMACIÓN FINAL -->
+   <section class="rsvp">
+  <div class="container">
+    <div class="eyebrow1">Nota especial</div>
+    
+    <div class="section-titlefinal">Hemos reservado este lugar pensando en ti</div>
+    <p>
+      Tu presencia es muy importante para nosotros. Si por algún motivo se te hace imposible acompañarnos, te agradeceríamos avisarnos con tiempo para poder organizar todo con el mismo amor y cuidado con el que hemos preparado este día.
+    </p>
+
+    <button type="button" class="button" id="rsvpButtonBottom">Confirma tu asistencia</button>
+
+    <!-- FORMULARIO DE CONFIRMACIÓN (se muestra al presionar el botón) -->
+    <div class="rsvp-form" id="rsvpForm" data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSeB9AL8mzC8mG8GvWnGVzwt_uz9I-a9UpsXAF1a45J-EopyCw/viewform?embedded=true" hidden>
+      <div class="form-stage" id="rsvpStage">
+        <div class="form-card" id="rsvpCard">
+          <span class="form-loading">Cargando formulario…</span>
+        </div>
+      </div>
+
+      <div class="form-done" id="rsvpDone" aria-live="polite" hidden>
+        <p class="form-thanks">¡Respuesta enviada! Gracias por confirmar.</p>
+        <button type="button" class="form-edit" id="rsvpEdit">Edita elección de asistencia</button>
+      </div>
+
+      <p class="form-fallback">
+        ¿No ves el formulario?
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB9AL8mzC8mG8GvWnGVzwt_uz9I-a9UpsXAF1a45J-EopyCw/viewform" target="_blank" rel="noopener">Ábrelo aquí</a>
+      </p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <div class="eyebrow1">Con mucho cariño Franyerli & Sileidy</div>
+    
+  </footer>
+
+  <!-- ARCHIVOS JAVASCRIPT -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/countdown.js"></script>
+</body>
+</html>
