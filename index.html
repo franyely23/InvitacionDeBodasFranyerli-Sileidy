@@ -60,7 +60,7 @@
   </div>
 
   <!-- Asegúrate de colocar la ruta de tu archivo en el 'src' -->
-  <audio id="weddingMusic" src="./Musica/la-bondad-de-dios.mp3" preload="metadata" loop></audio>
+  <audio id="weddingMusic" src="./Musica/la-bondad-de-dios.mp3" preload="metadata"></audio>
 </div>
 
   <main>
@@ -149,7 +149,7 @@
       </div>
     </section>
 
-    <!-- CONFIRMACIÓN FINAL -->
+   <!-- CONFIRMACIÓN FINAL -->
    <section class="rsvp">
   <div class="container">
     <div class="eyebrow1">Nota especial</div>
@@ -159,15 +159,26 @@
       Tu presencia es muy importante para nosotros. Si por algún motivo se te hace imposible acompañarnos, te agradeceríamos avisarnos con tiempo para poder organizar todo con el mismo amor y cuidado con el que hemos preparado este día.
     </p>
 
-    <a 
-      class="button" 
-      id="rsvpButtonBottom" 
-      href="https://docs.google.com/forms/d/e/1FAIpQLSeB9AL8mzC8mG8GvWnGVzwt_uz9I-a9UpsXAF1a45J-EopyCw/viewform?usp=publish-editor" 
-      target="_blank" 
-      rel="noopener"
-    >
-      Confirma tu asistencia
-    </a>
+    <button type="button" class="button" id="rsvpButtonBottom">Confirma tu asistencia</button>
+
+    <!-- FORMULARIO DE CONFIRMACIÓN (se muestra al presionar el botón) -->
+    <div class="rsvp-form" id="rsvpForm" data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSeB9AL8mzC8mG8GvWnGVzwt_uz9I-a9UpsXAF1a45J-EopyCw/viewform?embedded=true" hidden>
+      <div class="form-stage" id="rsvpStage">
+        <div class="form-card" id="rsvpCard">
+          <span class="form-loading">Cargando formulario…</span>
+        </div>
+      </div>
+
+      <div class="form-done" id="rsvpDone" aria-live="polite" hidden>
+        <p class="form-thanks">¡Respuesta enviada! Gracias por confirmar.</p>
+        <button type="button" class="form-edit" id="rsvpEdit">Edita elección de asistencia</button>
+      </div>
+
+      <p class="form-fallback">
+        ¿No ves el formulario?
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB9AL8mzC8mG8GvWnGVzwt_uz9I-a9UpsXAF1a45J-EopyCw/viewform" target="_blank" rel="noopener">Ábrelo aquí</a>
+      </p>
+    </div>
   </div>
 </section>
   </main>
