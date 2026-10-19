@@ -941,3 +941,16 @@ button.button {
   }
 }
 
+/* CENTRAR TEXTO DE NOTA ESPECIAL EN MÓVILES */
+@media (max-width: 700px) {
+  .rsvp > .container > p {
+    text-align: center;
+    text-align-last: center;
+    letter-spacing: normal;
+    word-spacing: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    line-height: 1.8;
+  }
+}
+
