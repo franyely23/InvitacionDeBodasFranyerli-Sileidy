@@ -216,8 +216,9 @@ section {
   margin: auto;
 }
 
+
 .verse h2 {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-size: clamp(2.1rem, 4.8vw, 3.4rem);
   margin: 20px 0 25px;
   color: var(--dark);
   font-weight: 400;
@@ -430,11 +431,14 @@ section {
 }
 
 .rsvp p {
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.85;
-  font-size: .94rem;
-  opacity: .95;
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.85;
+    font-size: .94rem;
+    opacity: 1;
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
 }
 
 .rsvp .button {
