@@ -612,8 +612,8 @@ footer {
   }
 
   .countdown {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
   }
 
   .countdown-section {
@@ -810,4 +810,84 @@ button.button {
         background-position: center;
         background-size: cover;
     }
+}
+/* =====================================================
+   AJUSTES FINALES: VERSÍCULO, CONTADOR Y NOTA ESPECIAL
+   ===================================================== */
+
+/* Justificación cuidando que la última línea quede centrada. */
+.verse h2 {
+  max-width: 25ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
+  line-height: 1.28;
+}
+
+/* Una única fila sin que el texto obligue a ensanchar las celdas. */
+.countdown {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.countdown-item {
+  min-width: 0;
+}
+
+/* Mayor contraste sin eliminar la fotografía original. */
+.rsvp {
+  background-image:
+    linear-gradient(rgba(32, 27, 24, .70), rgba(32, 27, 24, .76)),
+    url("../Imagenes/fondo-final.jpg");
+}
+.rsvp .section-titlefinal {
+  font-size: clamp(2.05rem, 5vw, 3rem);
+  line-height: 1.17;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+.rsvp > .container > p {
+  max-width: 540px;
+  font-size: 1rem;
+  line-height: 1.85;
+  font-weight: 400;
+  opacity: 1;
+  text-wrap: pretty;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 700px) {
+  .verse h2 {
+    font-size: clamp(2rem, 8vw, 2.55rem);
+    max-width: 22ch;
+  }
+
+  .countdown-wrap {
+    width: min(100% - 28px, 700px);
+  }
+  .countdown {
+    gap: 6px;
+  }
+  .countdown-item {
+    padding: 17px 2px;
+  }
+  .countdown-item strong {
+    font-size: clamp(1.75rem, 7vw, 2.7rem);
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown-item span {
+    font-size: clamp(.48rem, 1.8vw, .65rem);
+    letter-spacing: .06em;
+    white-space: nowrap;
+    margin-top: 9px;
+  }
+  .rsvp .section-titlefinal {
+    font-size: clamp(2.05rem, 8vw, 2.65rem);
+  }
+  .rsvp > .container > p {
+    font-size: .94rem;
+    line-height: 1.85;
+  }
 }
