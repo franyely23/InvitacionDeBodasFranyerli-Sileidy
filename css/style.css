@@ -895,3 +895,49 @@ button.button {
     line-height: 1.85;
   }
 }
+
+
+/* CORRECCIONES PARA TELÉFONOS */
+@media (max-width: 700px) {
+
+  /* Versículo bíblico */
+  .verse h2 {
+    text-align: center;
+    text-align-last: center;
+    letter-spacing: normal;
+    word-spacing: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+    max-width: 100%;
+    line-height: 1.35;
+  }
+
+  /* Texto de la nota especial */
+  .rsvp > .container > p {
+    text-align: left;
+    text-align-last: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    line-height: 1.8;
+  }
+
+  /* Subtítulos decorativos */
+  .intro .eyebrow,
+  .intro .eyebrow1,
+  .details .eyebrow,
+  .details .eyebrow1,
+  .rsvp .eyebrow1 {
+    letter-spacing: .18em;
+  }
+
+  /* Dedicatoria final */
+  footer .eyebrow1 {
+    letter-spacing: .16em;
+    line-height: 1.8;
+  }
+}
+
